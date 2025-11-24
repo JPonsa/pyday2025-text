@@ -1,0 +1,49 @@
+Evaluating Search Result Quality
+
+Measuring how well a retrieval system performs requires carefully designed evaluation frameworks with appropriate metrics and test collections.
+
+Relevance judgments form evaluation foundations. Human assessors review query-document pairs, assigning relevance grades. Binary (relevant/not relevant) judgments simplify but lose nuance; graded scales (highly relevant/somewhat relevant/not relevant) capture varying degrees of usefulness.
+
+Standard metrics for ranked results include:
+
+Precision@k: Among top k results, what fraction is relevant?
+- Useful when users examine only top results
+- Doesn't consider position within top k
+
+Recall@k: Of all relevant documents, what fraction appears in top k?
+- Important when finding all relevant content matters
+- Requires knowledge of complete relevant set
+
+Mean Reciprocal Rank (MRR): Average of 1/position for first relevant result
+- Rewards systems that rank relevant results highly
+- Only considers single relevant document
+
+Normalized Discounted Cumulative Gain (NDCG): 
+- Handles graded relevance
+- Applies logarithmic discount to lower positions
+- Normalizes against ideal ranking
+- Standard metric for many retrieval benchmarks
+
+Mean Average Precision (MAP): Average precision at each relevant document
+- Rewards both precision and recall
+- Considers entire ranking, not just top k
+
+Creating test collections requires:
+- Representative query sets spanning user needs
+- Sufficient relevant documents per query
+- Consistent judgment guidelines
+- Multiple assessors for reliability
+
+Benchmark datasets enable method comparison:
+- MS MARCO: Large-scale passage retrieval
+- TREC collections: Various domains and tasks
+- BEIR: Diverse evaluation across domains
+- Natural Questions: Question answering retrieval
+
+Online evaluation through A/B testing captures real user behavior:
+- Click-through rates
+- Time to first click
+- Query reformulation rates
+- Task completion rates
+
+Offline and online metrics may diverge—improvements in one don't guarantee improvement in the other. Comprehensive evaluation combines both approaches.

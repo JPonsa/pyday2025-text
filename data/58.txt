@@ -1,0 +1,59 @@
+Relevance Scoring Deep Dive
+
+Search systems assign numerical scores to rank documents. Understanding these calculations illuminates why results appear in particular orders.
+
+BM25 formula components:
+
+Score(D,Q) = Σ IDF(qi) · (f(qi,D) · (k1+1)) / (f(qi,D) + k1 · (1-b+b · |D|/avgdl))
+
+Where:
+- f(qi,D): Frequency of term qi in document D
+- |D|: Document length
+- avgdl: Average document length in collection
+- k1: Term frequency saturation parameter (typically 1.2-2.0)
+- b: Length normalization parameter (typically 0.75)
+- IDF: Inverse document frequency
+
+IDF calculation:
+
+IDF(qi) = log((N - n(qi) + 0.5) / (n(qi) + 0.5))
+
+Where:
+- N: Total documents in collection
+- n(qi): Documents containing term qi
+
+Interpretation:
+- Terms in few documents get high IDF
+- Common terms get low or negative IDF
+- Rare terms contribute more to relevance
+
+Length normalization effects:
+- b=0: No length normalization
+- b=1: Full length normalization
+- Higher b penalizes longer documents more
+- Shorter documents boosted relative to longer
+
+Term frequency saturation:
+- Low k1: Quick saturation (few occurrences sufficient)
+- High k1: Slower saturation (more occurrences help)
+- Prevents keyword stuffing exploitation
+
+Practical tuning:
+- Default parameters work well for most collections
+- Domain-specific tuning may improve results
+- Test on held-out queries with relevance judgments
+- Small changes can significantly impact rankings
+
+Multi-field scoring:
+- Title matches weighted higher than body
+- Exact phrase matches boosted
+- Field length normalization per field
+- Coordinate matches across fields
+
+Score normalization for result display:
+- Raw BM25 scores lack intuitive scale
+- Min-max normalization to [0,1] range
+- Percentile-based approaches
+- Users interpret relative order, not absolute scores
+
+Understanding scoring helps explain result rankings, diagnose retrieval failures, and tune systems for specific use cases.

@@ -1,0 +1,57 @@
+Exploring Mars: Challenges of Interplanetary Travel
+
+Human missions to Mars represent the next frontier in space exploration, presenting unprecedented engineering and biological challenges.
+
+Distance and communication:
+- Mars ranges 55-400 million km from Earth
+- Light delay: 4-24 minutes one-way
+- Real-time communication impossible
+- Autonomous systems essential for emergencies
+
+Transit duration:
+- Hohmann transfer: ~9 months each way
+- Faster trajectories possible with more fuel
+- Launch windows every 26 months
+- Total mission duration: 2-3 years minimum
+
+Radiation exposure:
+- No planetary magnetic field protection in transit
+- Solar particle events pose acute risks
+- Galactic cosmic rays cause chronic exposure
+- Shielding adds mass, pharmaceutical countermeasures researched
+
+Physiological effects of extended microgravity:
+- Bone density loss (~1% monthly)
+- Muscle atrophy
+- Cardiovascular deconditioning
+- Vision changes from fluid shifts
+- Immune system alterations
+
+Mars surface conditions:
+- Average temperature: -60°C
+- Atmospheric pressure: 0.6% of Earth
+- CO2 atmosphere (95%)
+- Dust storms lasting months
+- Higher radiation than Earth
+
+In-situ resource utilization (ISRU):
+- Extract water from subsurface ice
+- Produce oxygen from CO2
+- Manufacture rocket fuel locally
+- Reduce mass launched from Earth
+- Enable sustainable presence
+
+Psychological challenges:
+- Isolation from Earth
+- Confined quarters with small crew
+- Communication delays with family
+- Limited medical capabilities
+- Unknown duration emergencies
+
+Current progress:
+- Perseverance rover exploring Jezero Crater
+- Ingenuity demonstrating powered flight
+- SpaceX Starship development
+- Artemis program building lunar experience
+
+Timeline estimates vary widely, but crewed Mars missions remain a defining goal for space agencies and private companies, potentially achievable within the 2030s-2040s.

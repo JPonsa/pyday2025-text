@@ -1,0 +1,59 @@
+Neural Information Retrieval: Beyond Bag-of-Words
+
+Traditional retrieval models treat documents as unordered term collections, discarding word order and context. Neural approaches learn richer representations capturing semantic nuances.
+
+Dense retrieval architecture:
+- Bi-encoder: Query and document encoded separately
+- Vector representations stored in index
+- Approximate nearest neighbor search at query time
+- Efficient for large-scale retrieval
+
+Cross-encoder architecture:
+- Query and document processed jointly
+- Attention across query-document pairs
+- More accurate but computationally expensive
+- Typically used for re-ranking candidates
+
+BERT revolutionized NLP through:
+- Bidirectional context understanding
+- Transfer learning from pre-training
+- Attention mechanisms capturing relationships
+- Fine-tuning for downstream tasks
+
+Sentence-BERT modifications enable efficient retrieval:
+- Siamese network structure
+- Mean pooling over token embeddings
+- Contrastive training objectives
+- Fixed-dimension output vectors
+
+Training data requirements:
+- Query-document relevance pairs
+- Hard negatives improve discrimination
+- In-domain data boosts performance
+- Synthetic data augmentation helps
+
+ColBERT introduces late interaction:
+- Token-level representations stored
+- MaxSim computes relevance efficiently
+- Better accuracy than bi-encoders
+- More storage than dense vectors
+
+SPLADE learns sparse representations:
+- Combines neural and lexical benefits
+- Expansion adds related terms
+- Compatible with inverted indexes
+- Interpretable word weights
+
+Evaluation shows:
+- Neural methods excel at semantic matching
+- BM25 remains competitive for exact matches
+- Hybrid approaches often best overall
+- Domain matters significantly
+
+Production deployment considerations:
+- Latency budgets constrain architecture choices
+- Vector index updates require re-encoding
+- Model size affects serving costs
+- Quantization reduces memory requirements
+
+The field advances rapidly with new architectures, training techniques, and efficiency improvements enabling neural retrieval at production scale.

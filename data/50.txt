@@ -1,0 +1,58 @@
+Lexical vs Semantic Search: Understanding the Tradeoffs
+
+Information retrieval has evolved from pure keyword matching toward understanding user intent. Both approaches offer distinct advantages depending on context.
+
+Lexical search examines exact token overlap between queries and documents:
+
+Strengths:
+- Extremely fast with inverted indexes
+- Highly predictable behavior
+- Excellent for known-item search
+- No training required
+- Works with any language immediately
+- Precise when users know exact terminology
+
+Weaknesses:
+- Vocabulary mismatch problem
+- Cannot understand synonyms
+- Misses conceptually related content
+- Word order ignored in bag-of-words models
+- Struggles with misspellings
+
+Semantic search learns meaning representations:
+
+Strengths:
+- Captures synonyms and paraphrases
+- Understands conceptual similarity
+- Handles vocabulary variations
+- Can match across languages (multilingual models)
+- Finds related content user might not explicitly request
+
+Weaknesses:
+- Computationally expensive
+- Requires training data
+- May miss exact matches users expect
+- Harder to debug and explain
+- Vector indexes less mature than inverted indexes
+
+Hybrid approaches combine both:
+- BM25 for initial candidate retrieval
+- Neural re-ranking for final ordering
+- Reciprocal rank fusion combining multiple scores
+- Learned sparse representations bridging approaches
+
+Query characteristics suggest optimal approach:
+- Named entities → lexical often better
+- Conceptual questions → semantic advantageous
+- Code search → hybrid with exact matching importance
+- Conversational queries → semantic captures intent
+
+Production systems considerations:
+- Latency requirements may favor lexical
+- Cold start with no training data requires lexical
+- High accuracy needs may justify semantic cost
+- A/B testing reveals what users actually prefer
+
+The trend moves toward hybrid systems leveraging both paradigms. Fast lexical retrieval provides candidates; semantic models re-rank for relevance. This combination delivers speed and understanding.
+
+Neither approach is universally superior. Understanding tradeoffs enables choosing appropriately for specific applications and user needs.

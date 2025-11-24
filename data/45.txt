@@ -1,0 +1,42 @@
+Retrieval-Augmented Generation: Combining Search with Language Models
+
+Large language models demonstrate impressive capabilities but suffer from knowledge cutoffs, hallucination tendencies, and inability to access private data. Retrieval-augmented generation (RAG) addresses these limitations by grounding model responses in retrieved documents.
+
+The RAG pipeline typically involves:
+1. Query encoding into vector representation
+2. Similarity search against document embeddings
+3. Retrieving top-k relevant passages
+4. Concatenating retrieved context with original query
+5. Generating response conditioned on this augmented input
+
+This approach offers several advantages:
+- Responses cite verifiable sources
+- Knowledge updates require only re-indexing, not retraining
+- Private data remains searchable without exposing to model training
+- Reduced hallucination through grounding in retrieved facts
+
+Chunking strategy significantly impacts retrieval quality. Options include:
+- Fixed-size chunks (simple but may split concepts)
+- Sentence-based splitting (preserves grammatical units)
+- Semantic chunking (groups related content)
+- Hierarchical indexing (multiple granularities)
+
+Embedding model selection matters for domain fit. General-purpose models like OpenAI embeddings or Sentence-BERT work broadly while domain-specific models may outperform on specialized content.
+
+Retrieval evaluation differs from generation evaluation. Metrics include:
+- Recall@k: proportion of relevant documents in top k
+- Mean Reciprocal Rank: position of first relevant result
+- Normalized Discounted Cumulative Gain: graded relevance
+
+Hybrid approaches combine sparse (BM25) and dense (neural) retrieval. Some queries benefit from exact keyword matching while others require semantic understanding. Ensemble methods or learned routing optimize for query characteristics.
+
+Advanced techniques include:
+- Query rewriting for better retrieval
+- Hypothetical document embeddings (HyDE)
+- Re-ranking retrieved passages with cross-encoders
+- Multi-hop retrieval for complex questions
+- Self-RAG with retrieval decision making
+
+Production considerations span latency, cost, and accuracy trade-offs. Caching popular queries, batching embedding computations, and tiered retrieval systems help scale RAG applications.
+
+The field evolves rapidly as researchers explore tighter integration between retrieval and generation components, potentially enabling models that learn when and what to retrieve during training rather than relying on fixed pipelines.

@@ -1,0 +1,45 @@
+Troubleshooting Slow Database Queries
+
+When application performance degrades, database queries often bear responsibility. Systematic diagnosis identifies bottlenecks and guides optimization efforts.
+
+Start with query logging. Enable slow query logs to capture statements exceeding acceptable thresholds. Analyze patterns: are specific queries problematic, or does slowness correlate with load?
+
+EXPLAIN plans reveal query execution strategy. Look for:
+- Sequential scans on large tables (missing indexes)
+- Nested loop joins with high row estimates
+- Sort operations spilling to disk
+- Filter conditions applied after retrieval rather than during
+
+Index analysis follows. Common issues include:
+- Missing indexes on WHERE clause columns
+- Indexes present but not used (wrong column order)
+- Too many indexes slowing writes
+- Index bloat requiring maintenance
+
+Query patterns matter. Problematic patterns include:
+- N+1 queries from ORM misuse
+- SELECT * retrieving unnecessary columns
+- Missing LIMIT on potentially large result sets
+- Implicit type conversions preventing index use
+
+Connection management affects perceived performance. Symptoms include:
+- High connection establishment overhead
+- Connection pool exhaustion causing queuing
+- Long-running transactions holding locks
+
+Hardware constraints may underlie issues:
+- Insufficient memory forcing disk access
+- I/O bottlenecks on spinning disks
+- CPU saturation from complex calculations
+- Network latency to remote databases
+
+Solutions vary by diagnosis:
+- Add targeted indexes for filtering columns
+- Rewrite queries to enable better plans
+- Implement connection pooling
+- Add caching layer for repeated queries
+- Denormalize for read-heavy workloads
+- Partition large tables
+- Upgrade hardware or scale horizontally
+
+Monitoring should be continuous. Establish baselines for normal performance, alert on deviations, and track trends over time. Query performance regression often accompanies code deployments or data growth.

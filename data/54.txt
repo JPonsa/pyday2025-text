@@ -1,0 +1,27 @@
+Simple Terms:
+FINDING STUFF IN DOCUMENTS
+
+How do you locate things in lots of text? Here are the basics.
+
+EXACT MATCHING
+Type words. Computer finds those exact words. Easy but limited. If you search "happy" you won't find "joyful" even though they mean the same thing.
+
+RANKING RESULTS  
+Not all matches are equal. A document mentioning your word 50 times is probably more relevant than one mentioning it once. But be careful - some words are common everywhere ("the", "is", "and"). Those shouldn't count as much.
+
+UNDERSTANDING MEANING
+Newer systems try to understand what you actually want, not just the words you typed. Search "cheap flights" and it might show "affordable airfare" results too.
+
+THE TRADEOFF
+- Simple keyword search: fast, predictable, misses related stuff
+- Smart semantic search: finds related content, slower, sometimes weird results
+
+Most good systems combine both approaches. Quick keyword filter first, then smart ranking second.
+
+SCORING
+Results get scores. Higher score = more relevant. The math varies but generally considers:
+- How often your words appear
+- How rare those words are overall  
+- How well the content matches your intent
+
+That's basically it. Everything else is details and optimization.

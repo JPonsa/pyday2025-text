@@ -1,0 +1,25 @@
+Why Exact String Matching Falls Short
+
+Searching by precise word matching seems intuitive but quickly reveals limitations when applied to real-world document retrieval tasks.
+
+Consider someone researching "laptop buying guide" but the best article in your collection is titled "Notebook Computer Purchasing Advice." Zero keyword overlap, yet perfect semantic match. Boolean search returns nothing while the user remains unaware excellent content exists.
+
+Morphological variations compound the problem. "Running," "runs," "ran," and "runner" relate to the same concept but count as different tokens. Without stemming or lemmatization, queries miss relevant variations. Yet aggressive stemming creates false positives: "university" and "universe" share the stem "univers" despite unrelated meanings.
+
+Synonymy pervades natural language. Medical documents use "myocardial infarction" while patients search "heart attack." Legal texts reference "domicile" where ordinary people say "home." Technical jargon in specialized domains creates vocabulary barriers between experts and novices.
+
+Polysemy—single words with multiple meanings—causes precision problems. "Python" could mean snake, programming language, or Monty Python. "Apple" might be fruit, company, or record label. Context determines meaning, but keyword matching ignores context entirely.
+
+Word order matters for meaning yet boolean search typically ignores it. "Dog bites man" and "man bites dog" contain identical keywords with opposite meanings. Phrase matching helps but requires users to guess exact phrasings authors used.
+
+Negation presents challenges. Searching for documents about "not using chemical pesticides" returns documents heavily discussing chemical pesticides—the very topic the user wants to avoid.
+
+Cross-lingual retrieval becomes impossible with exact matching. Information exists in multiple languages, yet keyword search confines results to the query language.
+
+These limitations motivated decades of research into:
+- Statistical methods like TF-IDF and BM25
+- Query expansion using thesauri
+- Latent semantic analysis discovering hidden topics
+- Neural methods learning semantic representations
+
+Modern systems often combine approaches: fast keyword pre-filtering followed by semantic re-ranking provides both efficiency and understanding.

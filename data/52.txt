@@ -1,0 +1,55 @@
+Automobile Purchase Decision Framework
+
+Acquiring a vehicle represents a significant financial decision. Systematic evaluation helps ensure choices align with needs and budget.
+
+Needs assessment questions:
+- Primary use: commuting, family transport, cargo hauling?
+- Typical distances driven weekly?
+- Passengers regularly carried?
+- Parking constraints (garage, street, urban)?
+- Climate considerations (snow, extreme heat)?
+
+New versus pre-owned considerations:
+
+New vehicles offer:
+- Full warranty coverage
+- Latest safety and technology features
+- Financing incentives
+- No unknown history
+- Higher initial cost, faster depreciation
+
+Used vehicles offer:
+- Lower purchase price
+- Reduced depreciation hit
+- Known reliability data (for older models)
+- Higher insurance risk
+- Potential unknown issues
+
+Total cost of ownership includes:
+- Purchase price or monthly payment
+- Insurance premiums (vary by vehicle)
+- Fuel or charging costs
+- Maintenance and repairs
+- Registration and taxes
+- Depreciation
+
+Financing options:
+- Dealership financing (convenient, possibly higher rates)
+- Bank or credit union loans (shop around)
+- Leasing (lower payments, mileage restrictions)
+- Cash purchase (no interest, opportunity cost)
+
+Electric versus conventional powertrains:
+- EVs: Lower operating costs, limited range, charging infrastructure dependent
+- Hybrids: Compromise solution, complexity
+- Gasoline: Mature technology, fuel price exposure
+- Diesel: Efficiency benefits, higher upfront cost
+
+Negotiation strategies:
+- Research market prices before visiting dealers
+- Get pre-approved financing for leverage
+- Consider timing (end of month, model year end)
+- Negotiate out-the-door price, not monthly payment
+- Be willing to walk away
+
+Professional inspection recommended for used purchases. Carfax reports reveal accident history but miss unreported issues. Independent mechanic assessment identifies potential problems before commitment.

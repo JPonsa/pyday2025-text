@@ -1,0 +1,21 @@
+Ocean Acidification: The Other CO2 Problem
+
+While climate change captures headlines, the oceans absorb approximately 30% of atmospheric carbon dioxide, triggering chemical changes with profound ecological consequences.
+
+When CO2 dissolves in seawater, it forms carbonic acid. This process has lowered ocean pH by 0.1 units since pre-industrial times—a 26% increase in acidity. Projections suggest further 0.3-0.4 unit decrease by 2100 under current emission trajectories.
+
+Calcifying organisms face direct threats. Corals, mollusks, sea urchins, and certain plankton build shells and skeletons from calcium carbonate. Acidification reduces carbonate ion availability, making shell formation energetically costly. In severely acidified conditions, existing shells actually dissolve.
+
+Coral reef ecosystems suffer compounding stresses. Warming causes bleaching while acidification weakens structural integrity. The Great Barrier Reef has experienced unprecedented mass bleaching events, with recovery increasingly difficult as ocean chemistry shifts.
+
+Food web disruptions cascade through ecosystems. Pteropods—tiny swimming snails forming base of many marine food chains—show shell dissolution in current Antarctic waters. Their decline threatens fish, seabirds, and marine mammals dependent on them.
+
+Commercial fisheries face economic impacts. Shellfish industries in the Pacific Northwest already experience oyster larvae die-offs linked to acidified waters. Global shellfish harvest worth $23 billion annually faces uncertain futures.
+
+Research reveals species-specific responses. Some organisms tolerate or even benefit from changed conditions. Seagrasses may photosynthesize more efficiently. Certain fish populations show resilience. However, ecosystem-level effects remain concerning as relationships between species shift.
+
+Regional variation exists. Polar waters, naturally lower in carbonate saturation, acidify faster. Upwelling zones bring deep, CO2-rich water to surface. Coastal areas receive additional acidification from nutrient runoff causing algal blooms and decomposition.
+
+Mitigation requires addressing root causes through emission reductions. However, local actions including reducing nutrient pollution, protecting coastal ecosystems, and developing aquaculture practices for changing conditions provide adaptation pathways while global solutions develop.
+
+Monitoring networks track chemistry changes across oceans. Scientists deploy autonomous sensors, conduct research cruises, and study geological records of past acidification events to understand current trajectories and potential tipping points.

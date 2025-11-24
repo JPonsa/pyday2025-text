@@ -1,0 +1,76 @@
+Building Full-Text Search with Elasticsearch
+
+Elasticsearch provides distributed search and analytics capabilities built on Apache Lucene. This guide covers implementation patterns for text search applications.
+
+Index configuration:
+
+```json
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "custom_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase", "porter_stem", "stop"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "title": {"type": "text", "analyzer": "custom_analyzer", "boost": 2.0},
+      "content": {"type": "text", "analyzer": "custom_analyzer"},
+      "tags": {"type": "keyword"}
+    }
+  }
+}
+```
+
+Query types for different needs:
+
+Match query - analyzed full-text search:
+```json
+{"match": {"content": "machine learning algorithms"}}
+```
+
+Term query - exact keyword matching:
+```json
+{"term": {"tags": "python"}}
+```
+
+Multi-match - search across fields:
+```json
+{"multi_match": {"query": "neural networks", "fields": ["title^3", "content"]}}
+```
+
+Bool query - combining conditions:
+```json
+{
+  "bool": {
+    "must": [{"match": {"content": "search"}}],
+    "should": [{"match": {"title": "retrieval"}}],
+    "filter": [{"term": {"category": "tech"}}]
+  }
+}
+```
+
+Relevance tuning options:
+- Field boosting (title more important than body)
+- Function score for custom ranking factors
+- Rescore for expensive re-ranking on top results
+- Explain API for debugging relevance
+
+Performance optimization:
+- Appropriate shard count for data volume
+- Replica configuration for read throughput
+- Query caching for repeated searches
+- Filter context for non-scoring conditions
+
+Monitoring search quality:
+- Track zero-result queries
+- Log queries for analysis
+- A/B test ranking changes
+- Collect explicit relevance feedback
+
+Elasticsearch's BM25 implementation provides strong baseline relevance. Combined with proper analysis configuration and field boosting, it handles most text search requirements effectively.

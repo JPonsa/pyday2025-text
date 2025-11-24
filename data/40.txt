@@ -1,0 +1,25 @@
+Understanding Term Frequency and Inverse Document Frequency
+
+TF-IDF represents one of the foundational concepts in information retrieval. This weighting scheme identifies important terms within documents by balancing local and global frequency patterns.
+
+Term Frequency (TF) measures how often a word appears in a specific document. A document mentioning "neural" twenty times is likely more relevant to neural network queries than one mentioning it once. However, raw frequency can mislead: longer documents naturally contain more occurrences of most terms.
+
+Normalization addresses length bias through techniques like dividing by document length or using logarithmic scaling. Log-normalized TF dampens the effect of repeated terms, preventing documents that mention a term excessively from dominating results unfairly.
+
+Inverse Document Frequency (IDF) captures term specificity across the collection. Common words appearing in most documents receive low IDF scores, while rare terms receive high scores. The formula typically uses logarithm of total documents divided by documents containing the term.
+
+Multiplying TF by IDF produces weights that favor terms both prominent in specific documents and discriminative across the collection. A document about "quantum computing" scores highly when these terms appear frequently locally but rarely globally.
+
+BM25 extends TF-IDF with additional sophistication. It introduces saturation effects so additional term occurrences yield diminishing returns. It also incorporates document length normalization with tunable parameters, allowing customization for different collections.
+
+Parameters k1 and b in BM25 control term frequency saturation and length normalization respectively. Typical values (k1=1.5, b=0.75) work well across many collections, but optimal settings vary by domain.
+
+Practical implementations often include:
+- Stopword removal (eliminating "the", "and", "is")
+- Stemming or lemmatization (treating "running" and "runs" as "run")
+- N-gram indexing (capturing phrases like "machine learning")
+- Field weighting (prioritizing title matches over body matches)
+
+Despite neural approaches gaining prominence, BM25 remains a strong baseline. Many production systems use BM25 for initial retrieval followed by neural re-ranking, combining efficiency with semantic understanding.
+
+The interpretability of TF-IDF weights provides advantages in domains requiring explainable results. Users can understand why documents ranked highly by examining which terms contributed most to their scores.

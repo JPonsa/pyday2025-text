@@ -1,0 +1,23 @@
+Machine Machine Machine Machine Machine Machine Machine Machine Machine Machine Learning Learning Learning Learning Learning Learning Learning Learning Learning Learning
+
+This document contains repetitive keyword stuffing to demonstrate why raw term frequency alone provides poor relevance signals.
+
+Machine learning machine learning machine learning. Learning machine learning machine learning machine. Machine learning machine learning machine learning.
+
+Notice how this document would score extremely high on raw term frequency for "machine learning" queries despite providing zero actual information about the topic.
+
+Search engines evolved beyond simple term counting specifically because of manipulation attempts like this. TF-IDF's inverse document frequency component helps by recognizing these terms appear broadly across documents.
+
+BM25's saturation function further addresses this by applying diminishing returns to repeated terms. After several occurrences, additional repetitions contribute minimally to relevance scores.
+
+Modern algorithms additionally detect:
+- Unnaturally high keyword density
+- Lack of semantic coherence
+- Missing related terms that should co-occur
+- Statistical anomalies in term distribution
+
+Quality content about machine learning would discuss neural networks, training data, algorithms, models, accuracy, overfitting, and countless related concepts. Their absence here signals manipulation.
+
+This illustrates why sophisticated ranking algorithms outperform naive keyword counting for information retrieval tasks.
+
+Machine learning machine learning machine learning (one more time for emphasis on the absurdity).

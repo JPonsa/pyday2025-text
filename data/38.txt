@@ -1,0 +1,24 @@
+Vector Embeddings and Similarity Search
+
+Converting text into numerical representations enables mathematical operations on language. Each word, sentence, or document becomes a point in high-dimensional space where geometric relationships reflect semantic relationships.
+
+Word2Vec pioneered dense word representations through neural network training on large corpora. The famous example "king - man + woman = queen" demonstrated how arithmetic operations on vectors captured analogical reasoning. Skip-gram and CBOW architectures learned to predict context from words or words from context.
+
+Sentence and document embeddings extend this concept beyond individual words. Models like Sentence-BERT generate fixed-dimensional vectors for variable-length text, enabling direct comparison through cosine similarity or Euclidean distance calculations.
+
+The embedding space exhibits interesting properties. Synonyms cluster together while antonyms may cluster nearby but point in different directions. Domain-specific terms form distinct regions, and relationships like "capital-of" appear as consistent directional offsets.
+
+Modern transformer models generate contextual embeddings where the same word receives different representations depending on surrounding context. "Bank" near "river" differs from "bank" near "money," resolving ambiguity that plagued earlier static embedding methods.
+
+Approximate nearest neighbor algorithms enable efficient similarity search at scale. Techniques like HNSW (Hierarchical Navigable Small World) and IVF (Inverted File) trade exact results for dramatic speedups, making billion-scale vector search practical.
+
+Applications include:
+- Semantic search that understands query intent
+- Recommendation systems finding similar items
+- Duplicate detection across large datasets
+- Clustering documents by topic
+- Cross-lingual retrieval using multilingual embeddings
+
+The choice of embedding model significantly impacts downstream performance. Models trained on general web text may underperform on specialized domains like legal or medical documents, motivating domain-specific fine-tuning.
+
+Dimensionality presents trade-offs: higher dimensions capture more nuance but require more storage and computation. Typical values range from 384 to 1536 dimensions, with diminishing returns beyond certain thresholds.
