@@ -1,0 +1,13 @@
+Reinforcement Learning: From Q-Learning to Deep RL
+
+Reinforcement learning tackles sequential decision-making problems where agents learn optimal policies through interaction with environments. The field has evolved from simple tabular methods to sophisticated deep learning approaches capable of superhuman performance.
+
+Q-learning introduced the concept of value functions, estimating the expected future reward for taking actions in states. However, Q-learning struggles with high-dimensional state spaces, limiting its applicability to simple problems.
+
+Deep Q-Networks (DQN) combined convolutional neural networks with Q-learning, enabling direct learning from raw pixels. Key innovations including experience replay, target networks, and reward clipping stabilized training for complex environments like Atari games.
+
+Policy gradient methods directly optimize policies using gradient ascent on expected rewards. REINFORCE algorithm provides simple but high-variance gradient estimates, while Actor-Critic methods combine value function learning with policy optimization for better sample efficiency.
+
+Proximal Policy Optimization (PPO) and Trust Region Policy Optimization (TRPO) address policy stability through constrained optimization. These algorithms achieve reliable performance across continuous and discrete action spaces.
+
+Modern advances include off-policy algorithms like SAC (Soft Actor-Critic), model-based RL with learned dynamics models, and meta-learning approaches that enable rapid adaptation to new tasks. Applications span robotics, game playing, and autonomous systems.

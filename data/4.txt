@@ -1,0 +1,145 @@
+RESTful API Design Guide
+
+This comprehensive guide covers best practices for designing and implementing RESTful APIs. Following these principles will help create APIs that are intuitive, scalable, and maintainable.
+
+Core REST Principles
+
+REST (Representational State Transfer) is an architectural style that defines a set of constraints for designing networked applications. When applied to web services, REST provides a standardized approach to API design.
+
+Key constraints include:
+
+1. Client-Server Architecture: The client and server are separate concerns, allowing them to evolve independently.
+
+2. Stateless Communication: Each request from client to server must contain all information needed to understand and process the request.
+
+3. Cacheability: Responses should define themselves as cacheable or non-cacheable to improve scalability.
+
+4. Uniform Interface: Resources are identified by URIs, manipulated through standard HTTP methods, and representations are exchanged.
+
+HTTP Methods and Their Proper Usage
+
+GET: Retrieve data. Should be safe and idempotent.
+POST: Create new resources.
+PUT: Update existing resources or create if they don't exist.
+PATCH: Partially update resources.
+DELETE: Remove resources.
+
+Resource Naming Conventions
+
+Use nouns instead of verbs in resource paths:
+- Good: /users/123/orders/456
+- Bad: /getUserOrder?userId=123&orderId=456
+
+Use plural nouns for collections:
+- GET /users
+- GET /users/{id}
+- GET /users/{id}/orders
+
+URL Structure Best Practices
+
+Use hierarchical structure to show relationships:
+/api/v1/users/{userId}/orders/{orderId}
+
+Version your APIs:
+- Prefer URL versioning: /api/v1/
+- Or header versioning: Accept: application/vnd.api+json;version=1
+
+Limit depth to 3-4 levels for maintainability.
+
+Response Format Standards
+
+Use consistent JSON structure:
+{
+  "data": { ... },
+  "meta": {
+    "version": "1.0",
+    "timestamp": "2023-12-01T10:00:00Z"
+  },
+  "links": {
+    "self": "/api/v1/users/123",
+    "related": "/api/v1/users/123/orders"
+  }
+}
+
+Error Handling
+
+Use appropriate HTTP status codes:
+- 200 OK: Request successful
+- 201 Created: Resource created successfully
+- 400 Bad Request: Invalid request
+- 401 Unauthorized: Authentication required
+- 403 Forbidden: Insufficient permissions
+- 404 Not Found: Resource not found
+- 500 Internal Server Error: Server error
+
+Include error details in response body:
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid input parameters",
+    "details": {
+      "field": "email",
+      "reason": "Invalid format"
+    }
+  }
+}
+
+Authentication and Authorization
+
+Implement OAuth 2.0 for authentication:
+- Use JWT tokens for stateless authentication
+- Include proper token expiration and refresh mechanisms
+- Implement rate limiting to prevent abuse
+
+Use role-based access control (RBAC):
+- Define clear permission hierarchies
+- Implement principle of least privilege
+
+Rate Limiting and Throttling
+
+Protect your API with rate limiting:
+- Implement sliding window algorithms
+- Use tiered limits based on user tiers
+- Provide clear rate limit headers
+
+Documentation Standards
+
+Use OpenAPI/Swagger specification:
+- Document all endpoints with examples
+- Include authentication requirements
+- Provide request/response schemas
+- Use interactive documentation tools
+
+Testing Strategies
+
+Implement comprehensive testing:
+- Unit tests for business logic
+- Integration tests for API endpoints
+- Performance testing for load handling
+- Security testing for vulnerability assessment
+
+Monitoring and Logging
+
+Monitor API health and performance:
+- Track request/response times
+- Monitor error rates and types
+- Log security events
+- Implement health check endpoints
+
+Caching Strategies
+
+Implement appropriate caching:
+- Use HTTP caching headers (ETag, Cache-Control)
+- Implement application-level caching where needed
+- Consider CDN for static resources
+- Cache invalidation strategies
+
+Pagination and Filtering
+
+Handle large datasets efficiently:
+- Implement cursor-based pagination for large datasets
+- Provide filtering and sorting capabilities
+- Limit page sizes to prevent overloading
+- Include metadata about total available resources
+
+By following these guidelines, developers can create robust, scalable, and maintainable RESTful APIs that provide excellent developer experience and meet business requirements effectively.

@@ -1,0 +1,11 @@
+Deep Learning Architectures for Computer Vision
+
+Convolutional Neural Networks (CNNs) have revolutionized computer vision tasks since AlexNet's breakthrough in 2012. Modern CNN architectures employ sophisticated designs including residual connections (ResNet), inception modules (GoogLeNet), and dense connectivity (DenseNet) to achieve state-of-the-art performance.
+
+The ResNet architecture introduced skip connections that allow gradient flow through hundreds of layers, solving the vanishing gradient problem. ResNet-50 and ResNet-101 have become backbones for many vision applications including object detection, semantic segmentation, and image classification.
+
+Vision Transformers (ViTs) represent a paradigm shift from convolutional approaches. By treating image patches as sequences and applying transformer architectures originally designed for NLP, ViTs achieve competitive results while showing better scalability with training data and model size.
+
+EfficientNet family uses compound scaling to systematically balance network depth, width, and resolution. This principled approach yields models with better accuracy per FLOP compared to traditional scaling methods.
+
+Recent advances include Neural Architecture Search (NAS) which automates architecture design, and attention mechanisms that allow models to focus on relevant image regions. Self-supervised learning techniques like SimCLR and MoCo reduce dependence on labeled data by learning representations from unlabeled images.

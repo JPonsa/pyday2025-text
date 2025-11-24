@@ -1,0 +1,11 @@
+Natural Language Processing with Transformer Models
+
+The transformer architecture, introduced in "Attention Is All You Need" (2017), has become the foundation for modern NLP. Unlike previous recurrent models, transformers process entire sequences simultaneously through self-attention mechanisms, enabling parallel computation and better long-range dependency modeling.
+
+BERT (Bidirectional Encoder Representations from Transformers) pioneered bidirectional training, allowing the model to consider context from both directions. This approach achieved state-of-the-art results on 11 NLP tasks simultaneously, demonstrating the power of pre-training followed by task-specific fine-tuning.
+
+GPT (Generative Pre-trained Transformer) models focus on autoregressive language modeling, generating text token by token. GPT-3's 175 billion parameters and in-context learning capabilities have enabled impressive few-shot performance across diverse tasks including translation, summarization, and question answering.
+
+Recent developments include instruction-tuned models like InstructGPT and ChatGPT, which align model outputs with human preferences through reinforcement learning from human feedback (RLHF). These approaches improve safety, helpfulness, and truthfulness of generated responses.
+
+Multimodal transformers like CLIP and DALL-E bridge vision and language, learning joint representations that enable zero-shot image classification and text-to-image generation. These advances point toward more general artificial intelligence systems capable of understanding and creating across modalities.

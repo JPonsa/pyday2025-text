@@ -1,0 +1,13 @@
+Graph Neural Networks: Learning on Structured Data
+
+Graph Neural Networks (GNNs) extend deep learning to irregular, non-Euclidean data structures like social networks, molecular structures, and knowledge graphs. Unlike grid-structured data handled by CNNs, GNNs operate on graph representations with nodes, edges, and their attributes.
+
+Message passing frameworks form the foundation of most GNN architectures. Each node aggregates information from its neighbors through learnable functions, updating its representation iteratively. This process enables nodes to incorporate information from distant parts of the graph through multiple propagation steps.
+
+Graph Convolutional Networks (GCNs) adapt convolutional operations to graphs using spectral graph theory. By applying graph Fourier transforms, GCNs achieve localized, parameter-efficient filtering while maintaining permutation invariance.
+
+Graph Attention Networks (GAT) introduce attention mechanisms that weigh neighbor contributions differently during aggregation. This approach allows models to focus on the most relevant neighboring nodes for each specific task and node.
+
+Temporal Graph Networks extend GNNs to dynamic graphs that evolve over time. These models incorporate temporal information through mechanisms like recurrent neural networks or temporal attention, enabling applications like social network evolution prediction and dynamic traffic flow analysis.
+
+Applications span diverse domains including drug discovery (molecular property prediction), recommendation systems (user-item interaction modeling), and fraud detection (financial transaction networks). Recent research focuses on scaling GNNs to massive graphs and improving theoretical understanding of their representational power.
