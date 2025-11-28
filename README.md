@@ -15,4 +15,5 @@ https://platform.openai.com/docs/guides/embeddings
 ## Meta
 
 Author: Ricardo
+
 X (Twitter): [@ricardoanderegg](https://x.com/ricardoanderegg)
