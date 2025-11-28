@@ -7,3 +7,12 @@ Todo el taller se implementará desde cero, sin librerías externas. Para los em
 ```
 t3.polyrand.net
 ```
+
+## Links
+
+https://platform.openai.com/docs/guides/embeddings
+
+## Meta
+
+Author: Ricardo
+X (Twitter): [@ricardoanderegg](https://x.com/ricardoanderegg)
