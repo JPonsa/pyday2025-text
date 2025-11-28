@@ -27,6 +27,13 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+# TASK 1: Build a simple keyword search function
+# TASK 2: Add "scoring" to the keyword search function
+# TASK 3: Create an inverted index
+# TASK 4: Create a TF-IDF index
+# TASK 5: Implement semantic search using embeddings
+
+
 def main() -> int:
     args = parse_args()
     data = load_data(args.data_folder)
