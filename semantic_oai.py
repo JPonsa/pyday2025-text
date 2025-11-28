@@ -24,7 +24,10 @@ def get_embedding(text: str) -> list[float]:
 
     url = "https://api.openai.com/v1/embeddings"
 
-    data = json.dumps({"input": text, "model": EMBEDDING_MODEL}).encode("utf-8")
+    # default dimensions: 1536
+    data = json.dumps(
+        {"input": text, "model": EMBEDDING_MODEL, "dimensions": 768}
+    ).encode("utf-8")
 
     headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
 
