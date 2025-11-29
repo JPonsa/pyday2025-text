@@ -1,4 +1,5 @@
 import argparse
+import string
 import sys
 import textwrap
 from pathlib import Path
@@ -39,7 +40,18 @@ def tokenize(text: str) -> list[str]:
     TODO
     """
 
-    return []
+    text = text.lower().strip()
+    tokens = text.split()
+
+    final_tokens = [tok for tok in tokens if tok not in string.punctuation]
+
+    # final_tokens = []
+    # for tok in tokens:
+    #     if tok in string.punctuation:
+    #         continue
+    #     final_tokens.append(tok)
+
+    return final_tokens
 
 
 def keyword_search(data, keywords: list[str]) -> dict[int, str]:
