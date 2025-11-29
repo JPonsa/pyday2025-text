@@ -34,6 +34,14 @@ def parse_args() -> argparse.Namespace:
 # TASK 5: Implement semantic search using embeddings
 
 
+def tokenize(text: str) -> list[str]:
+    """
+    TODO
+    """
+
+    return []
+
+
 def keyword_search(data, keywords: list[str]) -> dict[int, str]:
     """
     TASK: Make the function use "AND" logic instead of "OR" logic.
