@@ -89,15 +89,18 @@ def keyword_search(data, keywords: list[str]) -> dict[int, str]:
     return {doc_id: data[doc_id] for doc_id in matching_doc_ids}
 
 
-def keyword_search_from_token_list(token_idex, keywords: list[str]) -> dict[int, str]:
+def keyword_search_from_token_list(token_index, keywords: list[str]) -> dict[int, str]:
     """
     TODO: Implement keyword search using the token index.
     """
 
     matching_doc_ids = set()
 
-    for document_id, content in token_index.items():
+    for document_id, token_list in token_index.items():
         all_keywords_found = True
+        for keyword in keywords:
+            if keyword not in token_list:
+                all_keywords_found = False
 
     return {doc_id: data[doc_id] for doc_id in matching_doc_ids}
 
