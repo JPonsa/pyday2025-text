@@ -72,7 +72,7 @@ def build_token_index(data: dict[int, str]) -> dict[int, list[str]]:
 
 def keyword_search(data, keywords: list[str]) -> dict[int, str]:
     """
-    TASK: Make the function use "AND" logic instead of "OR" logic.
+    Make the function use "AND" logic instead of "OR" logic.
     """
 
     matching_doc_ids = set()
@@ -85,6 +85,19 @@ def keyword_search(data, keywords: list[str]) -> dict[int, str]:
 
         if all_keywords_found:
             matching_doc_ids.add(document_id)
+
+    return {doc_id: data[doc_id] for doc_id in matching_doc_ids}
+
+
+def keyword_search_from_token_list(token_idex, keywords: list[str]) -> dict[int, str]:
+    """
+    TODO: Implement keyword search using the token index.
+    """
+
+    matching_doc_ids = set()
+
+    for document_id, content in token_index.items():
+        all_keywords_found = True
 
     return {doc_id: data[doc_id] for doc_id in matching_doc_ids}
 
