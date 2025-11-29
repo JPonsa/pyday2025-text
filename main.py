@@ -36,15 +36,19 @@ def parse_args() -> argparse.Namespace:
 
 def keyword_search(data, keywords: list[str]) -> dict[int, str]:
     """
-    TODO
+    TASK: Make the function use "AND" logic instead of "OR" logic.
     """
 
     matching_doc_ids = set()
 
     for document_id, content in data.items():
+        all_keywords_found = True
         for keyword in keywords:
-            if keyword in content:
-                matching_doc_ids.add(document_id)
+            if keyword not in content:
+                all_keywords_found = False
+
+        if all_keywords_found:
+            matching_doc_ids.add(document_id)
 
     return {doc_id: data[doc_id] for doc_id in matching_doc_ids}
 
