@@ -37,7 +37,8 @@ def parse_args() -> argparse.Namespace:
 
 def tokenize(text: str) -> list[str]:
     """
-    TODO
+    Split the input text into tokens. Remove punctuation and convert to lowercase.
+    Return a list of tokens.
     """
 
     text = text.lower().strip()
@@ -61,7 +62,12 @@ def build_token_index(data: dict[int, str]) -> dict[int, list[str]]:
         document_id -> ["list", "of", "tokens", "in", "the", "document"]
     """
 
-    return {}
+    token_index = {}
+    for document_id, content in data.items():
+        tokenized_document = tokenize(content)
+        token_index[document_id] = tokenized_document
+
+    return token_index
 
 
 def keyword_search(data, keywords: list[str]) -> dict[int, str]:
@@ -87,10 +93,12 @@ def main() -> int:
     args = parse_args()
     data = load_data(args.data_folder)
 
-    results = keyword_search(data, ["machine", "learning"])
+    # output = keyword_search(data, ["machine", "learning"])
+    output = build_token_index(data)
 
-    for id, content in results.items():
-        print(f"{id} | {textwrap.shorten(content, width=400)}")
+    for id, token_list in output.items():
+        # print(f"{id} | {textwrap.shorten(content, width=400)}")
+        print(f"{id} | {token_list[:40]}")
     return 0
 
 
