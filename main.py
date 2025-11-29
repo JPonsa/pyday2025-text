@@ -61,6 +61,8 @@ def build_token_index(data: dict[int, str]) -> dict[int, list[str]]:
         document_id -> ["list", "of", "tokens", "in", "the", "document"]
     """
 
+    return {}
+
 
 def keyword_search(data, keywords: list[str]) -> dict[int, str]:
     """
